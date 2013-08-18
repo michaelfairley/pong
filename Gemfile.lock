@@ -1,0 +1,12 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    gosu (0.7.48)
+    hasu (0.1.3)
+      gosu
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  hasu
