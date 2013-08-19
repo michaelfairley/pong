@@ -1,6 +1,7 @@
 class Paddle
   WIDTH = 16
   HEIGHT = 96
+  SPEED = 6
 
   attr_reader :side, :y
   def initialize(side)
@@ -38,5 +39,13 @@ class Paddle
       x2, y2, color,
       x2, y1, color,
     )
+  end
+
+  def up!
+    @y -= SPEED
+  end
+
+  def down!
+    @y += SPEED
   end
 end
