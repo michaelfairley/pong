@@ -72,6 +72,8 @@ class Ball
       @x = paddle.x1 - SIZE/2
     end
 
-    @angle = Gosu.angle(0, 0, -dx, dy)
+    ratio = (y - paddle.y) / Paddle::HEIGHT
+    @angle = ratio * 120 + 90
+    @angle *= -1  if paddle.side == :right
   end
 end
