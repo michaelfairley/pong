@@ -50,6 +50,13 @@ class Pong < Hasu::Window
       @right_paddle.down!
     end
 
+    if @ball.intersect?(@left_paddle)
+      @ball.bounce_off_paddle!(@left_paddle)
+    end
+    if @ball.intersect?(@right_paddle)
+      @ball.bounce_off_paddle!(@right_paddle)
+    end
+
     if @ball.off_left?
       @right_score += 1
       @ball = Ball.new
