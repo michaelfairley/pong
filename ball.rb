@@ -6,7 +6,8 @@ class Ball
     @x = Pong::WIDTH/2
     @y = Pong::HEIGHT/2
 
-    @angle = 135
+    @angle = rand(120) + 30
+    @angle *= -1  if rand > 0.5
     @speed = 6
   end
 
