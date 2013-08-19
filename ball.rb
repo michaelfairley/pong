@@ -75,5 +75,7 @@ class Ball
     ratio = (y - paddle.y) / Paddle::HEIGHT
     @angle = ratio * 120 + 90
     @angle *= -1  if paddle.side == :right
+
+    @speed *= 1.1
   end
 end
