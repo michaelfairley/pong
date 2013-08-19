@@ -48,4 +48,12 @@ class Ball
       x2, y1, color,
     )
   end
+
+  def off_left?
+    x1 < 0
+  end
+
+  def off_right?
+    x2 > Pong::WIDTH
+  end
 end
