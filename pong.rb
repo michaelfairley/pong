@@ -71,6 +71,13 @@ class Pong < Hasu::Window
       @ball = Ball.new
     end
   end
+
+  def button_down(button)
+    case button
+    when Gosu::KbEscape
+      close
+    end
+  end
 end
 
 Pong.run
